@@ -2,7 +2,7 @@
   var startX, startY;
   constructor(x, y) {
   }
-  move: function() {
+  move: function(x, y) {
 	
   }
 }
