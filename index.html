@@ -72,12 +72,8 @@ ss
 		<!-- app.stage.addChild(bunny); -->
 
 		var stage1 = new Stage1();
-		
-		app.ticker.add(function () {
-			// MAIN GAME LOOP
-			//bunny.rotation += 0.01;
-			stage1.init();
-		});		
+		stage1.init(app);
+
 		
     </script>
 </body>
