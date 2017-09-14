@@ -18,7 +18,7 @@
             height: 800px;
         }
 		div#main div {
-			margin: 0; 
+			margin: 0;
 			padding: 0;
 		}
 		div#game-area {
@@ -29,35 +29,35 @@
 			display: inline-block;
 			background-color: #fff;
 		}
-    </style>	
+    </style>
 </head>
 <body>
-	<div id="main" style="width: 1200px; height:600px; margin: 50px auto;" align="center">	
-	    <div id="code-area" style="width: 400px; height:800px;" align="center">	
-		
+	<div id="main" style="width: 1200px; height:600px; margin: 50px auto;" align="center">
+	    <div id="code-area" style="width: 400px; height:800px;" align="center">
+
 ss
 			<div class="notEditable">lkhghjkg</div>
 			<div class="editable" contenteditable="true">
 				jhkbkjhb
 			</div>
-		
+
 		</div>
 		<div id="game-area" style="width: 800px; height:800px;" align="center">
-			
-		</div>		
+
+		</div>
 		<div style="clear: both;"></div>
 	</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
 	<script type="text/javascript" src="map.js"></script>
-	<script type="text/javascript" src="tower.js"></script>
-	<script type="text/javascript" src="stage1.js"></script>
+	<!-- <script type="text/javascript" src="tower.js"></script> -->
+	<!-- <script type="text/javascript" src="stage1.js"></script> -->
     <script>
         var app = new PIXI.Application();
         document.getElementById('game-area').appendChild(app.view);
-	
+
 		<!-- var bunny = PIXI.Sprite.fromImage("bunny.png"); -->
 		<!-- var bunny2 = PIXI.Sprite.fromImage("bunny.png"); -->
-		
+
 		// Setup the position of the bunny
 		<!-- bunny.x = app.renderer.width / 2; -->
 		<!-- bunny.y = app.renderer.height / 2; -->
@@ -70,11 +70,13 @@ ss
 		<!-- bunny2.anchor.y = 0.5; -->
 		<!-- app.stage.addChild(bunny2); -->
 		<!-- app.stage.addChild(bunny); -->
+    var gameMap = new Map(800, 800, 4, 4);
+    gameMap.draw(app);
 
 		var stage1 = new Stage1();
 		stage1.init(app);
 
-		
+
     </script>
 </body>
 </html>
