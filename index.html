@@ -14,28 +14,38 @@
         }
         canvas {
             background-color: black;
-            width: 600px;
-            height: 600px;
+            width: 800px;
+            height: 800px;
         }
 		div#main div {
-			margin: 0; padding: 0;
+			margin: 0; 
+			padding: 0;
 		}
 		div#game-area {
-			display: inline-block;
+			float: left;
 		}
 		div#code-area {
+			float: left;
 			display: inline-block;
 			background-color: #fff;
 		}
     </style>	
 </head>
 <body>
-	<div id="main" style="width: 600px; height:600px; margin: 50px auto;" align="center">	
-	    <div id="code-area" style="width: 600px; height:600px;" align="center">	
+	<div id="main" style="width: 1200px; height:600px; margin: 50px auto;" align="center">	
+	    <div id="code-area" style="width: 400px; height:800px;" align="center">	
+		
+ss
+			<div class="notEditable">lkhghjkg</div>
+			<div class="editable" contenteditable="true">
+				jhkbkjhb
+			</div>
+		
 		</div>
-		<div id="game-area" style="width: 600px; height:600px;" align="center">
+		<div id="game-area" style="width: 800px; height:800px;" align="center">
 			
 		</div>		
+		<div style="clear: both;"></div>
 	</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
     <script>
