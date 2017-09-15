@@ -1,48 +1,64 @@
-class Map {
+	class Map{		
+		
+		constructor(width,height,area_width,area_height){
+		this.width = width;
+		this.height = height;
 
-  // Grids
-  //private var background = null;
-  var background_texure = null;
-  var foreground = null;
+		this.foreground = {area_width, area_height};
 
-  // Grid sizes
-  var width = null;
-  var height = null;
+		this.background_texture = PIXI.Sprite.fromImage("graphics/background_grass.png");		
+		}
+		draw(app) {
+			//background_texure = PIXI.Texture.fromImage("graphics/background_grass.png");
+			app.x = app.renderer.width / 2;
+			app.y = app.renderer.height / 2;
+			app.stage.addChild(this.background_texture);			
+		}
+	}
+// class Map {
 
-  // Area sizes
-  var area_width = null;
-  var area_height = null;
+  // // Grids
+  // //private var background = null;
+  // var background_texure = null;
+  // var foreground = null;
 
-  constructor(width, height, area_width, area_heigth){
-    this.width = width;
-    this.heigth = height;
+  // // Grid sizes
+  // var width = null;
+  // var height = null;
 
-    foreground = new Array(area_width, area_height);
+  // // Area sizes
+  // var area_width = null;
+  // var area_height = null;
 
-    background_texure = PIXI.Sprite.fromImage("graphics/background_grass.png");
+  // constructor(width, height, area_width, area_heigth){
+    // this.width = width;
+    // this.heigth = height;
 
+    // foreground = new Array(area_width, area_height);
 
-  }
-
-  draw: function(app){
-    //background_texure = PIXI.Texture.fromImage("graphics/background_grass.png");
-    app.x = app.renderer.width / 2;
-    app.y = app.renderer.height / 2;
-    app.stage.addChild(background_texture);
-
-
-    // Draw the grid
-  }
-
-  grid(){
-    // Create the grid
-  }
-
-  addChild(child, x, y){
+    // background_texure = PIXI.Sprite.fromImage("graphics/background_grass.png");
 
 
-    return false;
-  }
+  // }
 
-}
-export default Map;
+  // draw: function(app){
+    // //background_texure = PIXI.Texture.fromImage("graphics/background_grass.png");
+    // app.x = app.renderer.width / 2;
+    // app.y = app.renderer.height / 2;
+    // app.stage.addChild(background_texture);
+
+
+    // // Draw the grid
+  // }
+
+  // grid(){
+    // // Create the grid
+  // }
+
+  // addChild(child, x, y){
+
+
+    // return false;
+  // }
+
+// }
